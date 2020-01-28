@@ -1,18 +1,22 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'font-awesome/css/font-awesome.min.css'
 import './App.css'
 import React from 'react'
+import { HashRouter, BrowserRouter } from 'react-router-dom'
+
+
 
 import Logo from '../components/templates/Logo'
 import Nav from '../components/templates/Nav'
-import Main from '../components/templates/Main'
+import Routes from './Routes'
 import Footer from '../components/templates/Footer'
-import Header from '../components/templates/Header'
 
-export default props => 
-<div className="app">
-    <Header />
-    <Logo />
-    <Nav />
-    <Main />
-    <Footer />
-
-</div>
+export default props =>
+    <HashRouter>
+        <div className="app">
+            <Logo />
+            <Nav />
+            <Routes />
+            <Footer />
+        </div>
+    </HashRouter>
